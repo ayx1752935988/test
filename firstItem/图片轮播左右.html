@@ -1,0 +1,201 @@
+<html>
+
+	<head>
+		<title>图片轮播</title>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<script src="liandongmove.js" type="text/javascript" charset="utf-8"></script>
+	   <!-- <style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		.banner{
+			width: 800px;
+			height: 450px;
+			margin: 100px auto;
+			overflow: hidden;
+			/*position: relative;*/
+		}
+		#banner_imgs {
+			width: 4000px;
+			height: 450px;
+			/*overflow: hidden;*/
+			position: relative;
+			left: 0;
+			
+		}
+		ul li{
+			float: left;
+			/*display: none;*/
+			
+		}
+		#banner_imgs img{
+			width: 100%;
+			height: 450px;
+			/*display: none;*/
+		}
+		#banner_imgs img{
+			width: 800px;
+			height: 100%;
+			display: block;
+		}
+		.number{
+			/*border: 2px solid red;*/
+			width: 100%;
+			text-align: center;
+			/*position: relative;*/
+			position: relative;
+			/*left: 0px;*/
+			bottom: 40px;
+		}
+		.number a{
+			display: inline-block;
+			margin-left: 12px;
+			width: 60px;
+			height: 10px;
+			line-height: 10px;
+			height: 10px;
+			background: #fff;
+		}
+		.number .on{
+			background: gold;
+		}
+		
+	</style>-->
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.banner{
+			width: 800px;
+			height: 450px;
+			margin: 100px auto;
+			
+			
+		}
+		#banner_imgs{
+			width: 4000px;
+			height: 450px;
+			position: relative;
+			left: 0;
+			
+		}
+		#banner_imgs li{
+			list-style: none;
+			float: left;
+		}
+		#banner_imgs img{
+			display: block;
+			width: 800px;
+			height: 100%;
+		}
+		.number{
+			width: 100%;
+			text-align: center;
+			position: relative;
+			bottom: 40px;
+		}
+		.number a{
+			display: inline-block;
+			width: 60px;
+			height: 12px;
+			margin-left: 12px;
+			background: #fff;
+		}
+		a.on{
+			background: gold;
+		}
+	</style>
+	<!--<script type="text/javascript">
+		window.onload= function(){
+			var ulO =document.getElementsByTagName("ul")[0],
+			
+			   liO= ulO.getElementsByTagName("li"),
+			   oneHeight= liO[0].offsetWidth,
+			    as = document.getElementsByClassName("number")[0]
+			    .getElementsByTagName("a");
+			    for(var i=0;i<as.length;i++){
+			    	as[i].id=i;
+			    	as[i].onmousemove= function(){
+			    		for(var j=0;j<as.length;j++){
+			    			as[j].className="";
+			    			
+			    		}
+			    		
+			    		this.className="on";
+			    		
+			    		liO[this.id].style.display = "block";
+			    		startMove(ulO, "left", -this.id*oneHeight)
+			    		
+//			    	ulO.style.top = -this.id*450 +"px";
+			    	}
+			    	
+			    }
+		}
+	</script>-->
+	<script type="text/javascript">
+		window.onload = function(){
+			var ulO = document.getElementById("banner_imgs"),
+			liO = ulO.getElementsByTagName("li"),
+			      as = document.getElementsByClassName("number")[0]
+			      .getElementsByTagName("a");
+			      var oneHeight = liO[0].offsetWidth;
+			      for(var i=0;i<as.length;i++){
+			      	as[i].id = i;
+			      	as[i].onmousemove = function(){
+			      		
+			      		for(var j= 0;j<as.length;j++){
+			      			as[j].className = "";
+			      		}
+			      		this.className = "on";
+			      		liO[this.id].style.display = "block";
+			      		startMove(ulO, "left", -this.id*oneHeight);
+//			      		startMove(ulO, "left", -this.id*oneHeight)
+			      	}
+			      	
+			      }
+		}
+	</script>
+	</head>
+
+	<body>
+
+		<div class="banner">
+			<ul id="banner_imgs">
+				<li >
+					
+						<img  src="http://img.mukewang.com/53ad2498000174af13660768.jpg" alt="">
+					
+				</li>
+				<li>
+					
+						<img src="http://img.mukewang.com/53ad25df0001300613660768.jpg" alt="">
+				</li>
+				<li>
+				
+						<img src="http://img.mukewang.com/53ad26010001ac1113660768.jpg" alt="">
+				</li>
+				<li>
+					
+						<img src="http://img.mukewang.com/53ad26170001a86013660768.jpg" alt="">
+				</li>
+				<li>
+					
+						<img src="http://img.mukewang.com/53ad26320001289e13660768.jpg" alt="">
+				</li>
+			</ul>
+			<div class="number">
+				<a class="on" href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+	</body>
+
+	</html
