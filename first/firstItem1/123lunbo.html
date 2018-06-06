@@ -1,0 +1,136 @@
+<html>
+
+	<head>
+		<title>图片轮播</title>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<script src="liandongmove.js" type="text/javascript" charset="utf-8"></script>
+	    <style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		.banner{
+			width: 800px;
+			height: 450px;
+			overflow: hidden;
+			margin: 100px auto;
+		}
+		ul {
+			height: 450px;
+		}
+		ul li img{
+			display: block;
+			width: 800px;
+			height: 450px;
+		}
+		.number{
+			width: 100%;
+			position: relative;
+			text-align: center;
+			bottom: 40px;
+			height: 20px;
+			/*border: 1 solid red;*/	
+		}
+		.number a{
+			display: inline-block;
+			width: 60px;
+			height: 12px;
+			margin-left: 12px;
+			background: #fff;
+		}
+		.number .on{
+			background: gold;
+		}
+	</style>
+	<!--<script type="text/javascript">
+		window.onload= function(){
+			var ulO =document.getElementsByTagName("ul")[0],
+			   liO= ulO.getElementsByTagName("li"),
+			    as = document.getElementsByClassName("number")[0]
+			    .getElementsByTagName("a");
+			    for(var i=0;i<as.length;i++){
+			    	as[i].id=i;
+			    	as[i].onmousemove= function(){
+			    		for(var j=0;j<as.length;j++){
+			    			as[j].className="";
+			    			liO[j].style.display="none";
+			    			liO[j].style.filter = 'alpha(opacity=0)';
+			    			liO[j].style.opacity = 0;
+			    		}
+			    		this.className="on";
+			    		liO[this.id].style.display = "block";
+			    		startMove(liO[this.id], "opacity", 100)
+			    		
+//			    	ulO.style.top = -this.id*450 +"px";
+			    	}
+			    	
+			    }
+		}
+	</script>-->
+	<script type="text/javascript">
+		window.onload = function(){
+			var ulO = document.getElementsByTagName("ul")[0],
+			     liO =ulO.getElementsByTagName("li"),
+			      as = document.getElementsByClassName("number")[0]
+			      .getElementsByTagName("a");
+			      for(var i= 0; i<as.length; i++){
+			      	as[i].id = i;
+			      	as[i].onmousemove = function(){
+			      		for(var j=0; j<as.length;j++){
+			      			as[j].className="";
+			    			liO[j].style.display="none";
+			    			liO[j].style.filter = 'alpha(opacity=0)';
+			    			liO[j].style.opacity = 0;
+			      		}
+			      		this.className="on";
+			    		liO[this.id].style.display = "block";
+			    		startMove(liO[this.id], "opacity", 100)
+			      	}
+			      	
+			      	
+			      }
+		}
+	</script>
+	</head>
+
+	<body>
+
+		<div class="banner">
+			<ul id="banner_imgs">
+				<li style="display: block;">
+					
+						<img  src="http://img.mukewang.com/53ad2498000174af13660768.jpg" alt="">
+					
+				</li>
+				<li>
+					
+						<img src="http://img.mukewang.com/53ad25df0001300613660768.jpg" alt="">
+				</li>
+				<li>
+				
+						<img src="http://img.mukewang.com/53ad26010001ac1113660768.jpg" alt="">
+				</li>
+				<li>
+					
+						<img src="http://img.mukewang.com/53ad26170001a86013660768.jpg" alt="">
+				</li>
+				<li>
+					
+						<img src="http://img.mukewang.com/53ad26320001289e13660768.jpg" alt="">
+				</li>
+			</ul>
+			<div class="number">
+				<a class="on" href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+	</body>
+
+	</html
