@@ -1,4 +1,4 @@
-## 动画sdf特sdf 效123
+## 动画sd撒旦发射点f特sdf 效123
 1. transition 实现路由切换动画
 
 * App.vue transition
