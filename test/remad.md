@@ -1,4 +1,4 @@
-## 动画特效123
+## 动画士大夫大师傅特效123
 1. transition 实现路由切换动画
 
 * App.vue transition
